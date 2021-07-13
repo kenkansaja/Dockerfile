@@ -1,5 +1,5 @@
 FROM python:3.9-slim-buster
-LABEL maintainer "kenkannih <kenkanwardana@gmail.com>"
+LABEL maintainer "kenkansaja <kenkanwardana@gmail.com>"
 
 ENV LANG C.UTF-8
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -141,7 +141,7 @@ CMD ["python3"]
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD https://raw.githubusercontent.com/kenkannih/Dockerfile/Kaisar-userbot/requirements.txt requirements.txt
+ADD https://raw.githubusercontent.com/kenkansaja/Dockerfile/Kaisar-userbot/requirements.txt requirements.txt
 # Kaisar userbot Instalitation
 RUN set -ex \
 	&& apt-get -qq update && apt-get -qq -y install --no-install-recommends \
@@ -184,7 +184,7 @@ RUN wget -N https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedrive
     chmod 0755 /usr/bin/chromedriver
 
 # Install Requirements
-RUN pip3 install -r https://raw.githubusercontent.com/kenkannih/Dockerfile/Kaisar-userbot/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/kenkansaja/Dockerfile/Kaisar-userbot/requirements.txt
 
 EXPOSE 443 80
 
